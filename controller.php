@@ -11,7 +11,7 @@ class PageRedirectPackage extends Package {
 
 	protected $pkgHandle = 'page_redirect';
 	protected $appVersionRequired = '5.4.1';
-	protected $pkgVersion = '1.3';
+	protected $pkgVersion = '1.4';
 	
 	public function getPackageDescription() {
 		return t("Adds a page attribute that allows you to specify a page to redirect to.");

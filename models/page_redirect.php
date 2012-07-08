@@ -27,7 +27,7 @@ class PageRedirect {
 				header("HTTP/1.1 301 Moved Permanently"); 
 				if(!$npage->isExternalLink()) {
 					$nh = Loader::Helper('navigation');
-					header('Location: '.$nh->getLinkToCollection($npage));
+					header('Location: '.$nh->getLinkToCollection($npage, true));
 				} else {
 					header('Location: '.$npage->getCollectionPointerExternalLink());
 					exit;
