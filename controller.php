@@ -40,7 +40,8 @@ class Controller extends \Concrete\Core\Package\Package {
 	}
 	
 	public function on_start() {
-		Events::addListener('on_start', function($event) {
+        //not on_start due to caching bug :/
+		Events::addListener('on_before_render', function($event) {
             $page = \Page::getCurrentPage();
             if(!is_object($page)) {
                 return;
